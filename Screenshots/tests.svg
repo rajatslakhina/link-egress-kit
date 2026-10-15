@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="712" viewBox="0 0 1000 712">
+<rect width="1000" height="712" rx="10" fill="#0d1117"/>
+<circle cx="20" cy="18" r="6" fill="#ff5f56"/><circle cx="40" cy="18" r="6" fill="#ffbd2e"/><circle cx="60" cy="18" r="6" fill="#27c93f"/>
+<text x="500.0" y="22" text-anchor="middle" font-family="Menlo,monospace" font-size="12" fill="#8b949e">LinkEgressKit&#160;quality&#160;gates</text>
+<text x="16" y="50" font-family="Menlo,monospace" font-size="11.5" fill="#79c0ff">$&#160;swift&#160;build&#160;&#160;&#160;(fresh&#160;scratch&#160;path)</text>
+<text x="16" y="68" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">Build&#160;complete!&#160;0&#160;warnings,&#160;0&#160;errors</text>
+<text x="16" y="86" font-family="Menlo,monospace" font-size="11.5" fill="#c9d1d9">&#160;</text>
+<text x="16" y="104" font-family="Menlo,monospace" font-size="11.5" fill="#79c0ff">$&#160;swift&#160;test&#160;--enable-code-coverage</text>
+<text x="16" y="122" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">Executed&#160;54&#160;tests,&#160;with&#160;0&#160;failures&#160;(0&#160;unexpected)&#160;-&#160;5&#160;repeated&#160;runs,&#160;all&#160;green</text>
+<text x="16" y="140" font-family="Menlo,monospace" font-size="11.5" fill="#c9d1d9">&#160;</text>
+<text x="16" y="158" font-family="Menlo,monospace" font-size="11.5" fill="#79c0ff">$&#160;xcrun&#160;llvm-cov&#160;report&#160;...&#160;(library&#160;target,&#160;21&#160;files)</text>
+<text x="16" y="176" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">Defang.swift&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;lines&#160;100.00%&#160;&#160;regions&#160;100.00%&#160;&#160;functions&#160;100.00%</text>
+<text x="16" y="194" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">EgressContext.swift&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;lines&#160;100.00%&#160;&#160;regions&#160;100.00%&#160;&#160;functions&#160;100.00%</text>
+<text x="16" y="212" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">EgressLedger.swift&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;lines&#160;100.00%&#160;&#160;regions&#160;100.00%&#160;&#160;functions&#160;100.00%</text>
+<text x="16" y="230" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">JudgedLink.swift&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;lines&#160;100.00%&#160;&#160;regions&#160;100.00%&#160;&#160;functions&#160;100.00%</text>
+<text x="16" y="248" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">LinkFinding.swift&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;lines&#160;100.00%&#160;&#160;regions&#160;100.00%&#160;&#160;functions&#160;100.00%</text>
+<text x="16" y="266" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">LinkJudge+Payload.swift&#160;&#160;&#160;&#160;lines&#160;100.00%&#160;&#160;regions&#160;100.00%&#160;&#160;functions&#160;100.00%</text>
+<text x="16" y="284" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">LinkJudge.swift&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;lines&#160;100.00%&#160;&#160;regions&#160;100.00%&#160;&#160;functions&#160;100.00%</text>
+<text x="16" y="302" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">LinkPolicy.swift&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;lines&#160;100.00%&#160;&#160;regions&#160;100.00%&#160;&#160;functions&#160;100.00%</text>
+<text x="16" y="320" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">LinkSanitizer.swift&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;lines&#160;100.00%&#160;&#160;regions&#160;100.00%&#160;&#160;functions&#160;100.00%</text>
+<text x="16" y="338" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">LinkScanner+Bare.swift&#160;&#160;&#160;&#160;&#160;lines&#160;100.00%&#160;&#160;regions&#160;100.00%&#160;&#160;functions&#160;100.00%</text>
+<text x="16" y="356" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">LinkScanner+Inline.swift&#160;&#160;&#160;lines&#160;100.00%&#160;&#160;regions&#160;100.00%&#160;&#160;functions&#160;100.00%</text>
+<text x="16" y="374" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">LinkScanner+Lines.swift&#160;&#160;&#160;&#160;lines&#160;100.00%&#160;&#160;regions&#160;100.00%&#160;&#160;functions&#160;100.00%</text>
+<text x="16" y="392" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">LinkScanner.swift&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;lines&#160;100.00%&#160;&#160;regions&#160;100.00%&#160;&#160;functions&#160;100.00%</text>
+<text x="16" y="410" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">LinkStreamGate.swift&#160;&#160;&#160;&#160;&#160;&#160;&#160;lines&#160;100.00%&#160;&#160;regions&#160;100.00%&#160;&#160;functions&#160;100.00%</text>
+<text x="16" y="428" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">LinkTarget+Segments.swift&#160;&#160;lines&#160;100.00%&#160;&#160;regions&#160;100.00%&#160;&#160;functions&#160;100.00%</text>
+<text x="16" y="446" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">LinkTarget.swift&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;lines&#160;100.00%&#160;&#160;regions&#160;100.00%&#160;&#160;functions&#160;100.00%</text>
+<text x="16" y="464" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">PayloadDecoder.swift&#160;&#160;&#160;&#160;&#160;&#160;&#160;lines&#160;100.00%&#160;&#160;regions&#160;100.00%&#160;&#160;functions&#160;100.00%</text>
+<text x="16" y="482" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">Punycode.swift&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;lines&#160;100.00%&#160;&#160;regions&#160;100.00%&#160;&#160;functions&#160;100.00%</text>
+<text x="16" y="500" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">Scalars.swift&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;lines&#160;100.00%&#160;&#160;regions&#160;100.00%&#160;&#160;functions&#160;100.00%</text>
+<text x="16" y="518" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">ScannedLink.swift&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;lines&#160;100.00%&#160;&#160;regions&#160;100.00%&#160;&#160;functions&#160;100.00%</text>
+<text x="16" y="536" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">ShardHistory.swift&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;lines&#160;100.00%&#160;&#160;regions&#160;100.00%&#160;&#160;functions&#160;100.00%</text>
+<text x="16" y="554" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">TOTAL&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;lines&#160;100.00%&#160;&#160;regions&#160;100.00%&#160;&#160;functions&#160;100.00%</text>
+<text x="16" y="572" font-family="Menlo,monospace" font-size="11.5" fill="#c9d1d9">&#160;</text>
+<text x="16" y="590" font-family="Menlo,monospace" font-size="11.5" fill="#79c0ff">$&#160;swiftlint&#160;lint&#160;--strict&#160;&#160;&#160;(SwiftLint&#160;0.63.2)</text>
+<text x="16" y="608" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">Done&#160;linting!&#160;Found&#160;0&#160;violations,&#160;0&#160;serious&#160;in&#160;31&#160;files.</text>
+<text x="16" y="626" font-family="Menlo,monospace" font-size="11.5" fill="#c9d1d9">&#160;</text>
+<text x="16" y="644" font-family="Menlo,monospace" font-size="11.5" fill="#c9d1d9">mutation&#160;checks:&#160;no&#160;outer-bracket&#160;escape&#160;-&gt;&#160;2&#160;failures;&#160;no&#160;bare&#160;URLs&#160;-&gt;&#160;46;&#160;no&#160;Base64&#160;-&gt;&#160;10</text>
+<text x="16" y="662" font-family="Menlo,monospace" font-size="11.5" fill="#c9d1d9">oracle:&#160;13&#160;attack&#160;answers;&#160;after&#160;sanitizing,&#160;Apple's&#160;parser&#160;finds&#160;no&#160;live&#160;link&#160;carrying&#160;a&#160;value,</text>
+<text x="16" y="680" font-family="Menlo,monospace" font-size="11.5" fill="#c9d1d9">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;except&#160;the&#160;first&#160;fragment&#160;of&#160;a&#160;shard,&#160;which&#160;is&#160;released&#160;by&#160;design</text>
+</svg>

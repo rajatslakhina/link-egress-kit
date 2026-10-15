@@ -1,0 +1,72 @@
+LinkEgressKit demo: every link a model writes, judged before it can be tapped or loaded.
+Live links are counted with Apple's own Markdown parser, as SwiftUI's Text renders an answer.
+
+== 1. One leak, six spellings
+   form         live before  naive regex sees it  LinkEgressKit  live after
+   inline       1            yes                  unlinked       0
+   definition   1            no                   unlinked       0
+   autolink     1            no                   unlinked       0
+   bare URL     1            no                   unlinked       0
+   escaped      1            yes                  unlinked       0
+   www.         1            no                   unlinked       0
+   a [text](url) regex sees 2 of 6; LinkEgressKit unlinks 6 of 6
+   escaped form after sanitizing: Confirm \[here](https[:]//collect[.]example/c?d=jane[.]doe%40example[.]com (link to collect[.]example removed: it carried email)).
+
+== 2. The token the restore step would fill in
+   restore, then render: 1 live link(s) carry the address
+   inline     collect.example            unlink    sensitiveValue
+   autolink   collect.example            unlink    quarantinedHost, sensitiveValue
+   check, then restore:  0 live link(s) carry it
+   shown: Booked. Confirm your seat (link to collect[.]example removed: it carried session token EMAIL_1) or https[:]//collect[.]example/t?u=%5BEMAIL_1%5D (link to collect[.]example removed: it carried session token EMAIL_1).
+
+== 3. What the conversation said
+   image      track.example              unlink    imageAutoload, conversationText, opaquePayload
+   bareURL    www.flytap.example         keep      
+   inline     rates.example              unlink    conversationText, opaquePayload
+   inline     travel.example             keep      conversationTextInPath
+   bareURL    www.visitlisboa.example    keep      
+   conversationText user message in query 32 chars via base64 -> unlink
+   conversationText system prompt in query 36 chars -> unlink
+   conversationTextInPath user message in path 24 chars -> keep
+   live links: 5 before, 3 after; carrying the trip or the rate code after: 0
+
+== 4. Looks like one host, goes to another
+   inline     apple.com.account-check.example annotate  labelMismatch
+   inline     account-check.example      unlink    userinfo, labelMismatch
+   bareURL    аpple.example              annotate  lookalikeHost
+   inline     203.0.113.9                annotate  numericHost
+   inline     javascript                 unlink    schemeNotAllowed
+   inline     www.apple.com              keep      
+   rendered:
+     1. [apple.com](https://apple.com.account-check.example/login) (goes to apple[.]com[.]account-check[.]example)
+     2. support.apple.com (link to account-check[.]example removed: it hides its real host)
+     3. https://аpple.example/id (look-alike host xn--pple-43d[.]example)
+     4. [Apple Store](http://203.0.113.9/store) (numeric host 203[.]0[.]113[.]9)
+     5. run the fix (link removed: javascript: links are not allowed)
+     6. [apple.com](https://www.apple.com/iphone/) is fine.
+
+== 5. One value, several links
+   inline     c.example                  keep      
+   inline     c.example                  keep      
+   inline     c.example                  unlink    shardedValue
+   inline     c.example                  unlink    quarantinedHost
+   inline     docs.example               keep      
+   one answer: link 1 is released (a fragment); link 2 completes nothing; link 3 completes the address
+   ledger turn 1 [continue](https://c.example/s?p=jane.doe) -> keep []
+   ledger turn 2 [continue](https://c.example/s?p=@example.com) -> unlink ["shardedValue"]
+   ledger turn 3 [continue](https://c.example/s?p=thanks) -> unlink ["quarantinedHost"]
+   ledger after 3 turns: quarantined ["c.example"]
+
+== 6. Streaming
+   174 scalars in chunks of 7; held after each chunk:
+   2 0 7 14 21 28 35 42 49 56 5 6 13 20 27 0 7 14 21 28 35 42 49 56 4
+   largest hold 56 scalars; streamed output equals the whole-text result: true
+   two-chunk splits identical to the whole-text result: 175 of 175
+   live links in what was shown: 1, carrying the address: 0
+
+== 7. An allowlist and a redirector
+   inline     docs.acme.example          keep      
+   inline     www.google.com             keep      
+   inline     www.google.com             unlink    embeddedURL, hostNotAllowed, opaquePayload
+   inline     mirror.example             unlink    hostNotAllowed
+   rendered: See [the handbook](https://docs.acme.example/handbook), [search](https://www.google.com/search?q=acme+handbook) and this result (link to www[.]google[.]com removed: it forwards to collect[.]example) or the mirror (link to mirror[.]example removed: mirror[.]example is not on the allowlist).

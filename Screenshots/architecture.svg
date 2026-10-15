@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560">
+<rect width="1000" height="560" rx="10" fill="#0d1117"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8b949e"/></marker></defs>
+<text x="500" y="30" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="bold" fill="#e6edf3">LinkEgressKit&#160;&#8212;&#160;every&#160;link&#160;a&#160;model&#160;writes,&#160;judged&#160;before&#160;it&#160;can&#160;be&#160;tapped</text>
+<g font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#c9d1d9">
+<rect x="20" y="60" width="200" height="250" rx="8" fill="#161b22" stroke="#30363d"/>
+<text x="120" y="82" text-anchor="middle" font-weight="bold" fill="#79c0ff">Model&#160;answer&#160;(Markdown)</text>
+<text x="34" y="108">[text](url&#160;&quot;title&quot;)</text>
+<text x="34" y="128">![alt](src)&#160;&#160;&#8212;&#160;loads&#160;unasked</text>
+<text x="34" y="148">[1]:&#160;url&#160;&#160;&#8212;&#160;definition&#160;line</text>
+<text x="34" y="168">&lt;https://...&gt;&#160;&#160;&lt;name@host&gt;</text>
+<text x="34" y="188">https://...&#160;&#160;www.&#160;&#160;name@host</text>
+<text x="34" y="208">\[text](url)&#160;&#8212;&#160;URL&#160;still&#160;live</text>
+<text x="34" y="236" fill="#8b949e">code&#160;is&#160;inert&#160;only&#160;where&#160;SwiftUI</text>
+<text x="34" y="254" fill="#8b949e">Text&#160;and&#160;CommonMark&#160;agree</text>
+<text x="34" y="284" fill="#8b949e">streamed:&#160;LinkStreamGate</text>
+<rect x="260" y="60" width="200" height="120" rx="8" fill="#161b22" stroke="#d2a8ff"/>
+<text x="360" y="82" text-anchor="middle" font-weight="bold" fill="#d2a8ff">LinkScanner</text>
+<text x="274" y="106">every&#160;construct&#160;a&#160;renderer</text>
+<text x="274" y="124">could&#160;make&#160;live,&#160;with&#160;ranges</text>
+<text x="274" y="148">nested&#160;label&#160;&#8594;&#160;outer&#160;[&#160;escaped</text>
+<text x="274" y="166">partial&#160;mode&#160;&#8594;&#160;hold&#160;point</text>
+<rect x="260" y="200" width="200" height="110" rx="8" fill="#161b22" stroke="#d2a8ff"/>
+<text x="360" y="222" text-anchor="middle" font-weight="bold" fill="#d2a8ff">LinkTarget</text>
+<text x="274" y="246">host&#160;as&#160;a&#160;browser&#160;finds&#160;it:</text>
+<text x="274" y="264">https:evil.example,&#160;userinfo,</text>
+<text x="274" y="282">IPv4,&#160;Punycode,&#160;non-ASCII</text>
+<text x="274" y="300">segments,segments,&#160;query,&#160;embedded&#160;URLs#160;query,segments,&#160;query,&#160;embedded&#160;URLs#160;redirects</text>
+<rect x="500" y="60" width="250" height="250" rx="8" fill="#161b22" stroke="#ffa198"/>
+<text x="625" y="82" text-anchor="middle" font-weight="bold" fill="#ffa198">LinkJudge&#160;(causal,&#160;in&#160;order)</text>
+<text x="514" y="106">scheme&#160;&#183;&#160;host&#160;sets&#160;&#183;&#160;images&#160;&#183;&#160;userinfo</text>
+<text x="514" y="126">look-alike&#160;&#183;&#160;numeric&#160;&#183;&#160;label&#160;mismatch</text>
+<text x="514" y="146">redirect:&#160;?q=https://other.host</text>
+<text x="514" y="172" fill="#e6edf3">PayloadDecoder:&#160;raw,&#160;percent&#215;3,</text>
+<text x="514" y="190" fill="#e6edf3">form,&#160;Base64,&#160;hex</text>
+<text x="514" y="214">sensitive&#160;values&#160;(any&#160;spelling)</text>
+<text x="514" y="232">conversation&#160;text&#160;(16-char&#160;runs)</text>
+<text x="514" y="250">opaque&#160;tokens&#160;&#183;&#160;shards&#160;per&#160;host</text>
+<text x="514" y="274" fill="#8b949e">LinkPolicy:&#160;.standard&#160;/&#160;.strict&#160;/&#160;.audit</text>
+<text x="514" y="292" fill="#8b949e">keep&#160;&#183;&#160;annotate&#160;&#183;&#160;unlink&#160;per&#160;finding</text>
+<rect x="790" y="60" width="190" height="250" rx="8" fill="#161b22" stroke="#7ee787"/>
+<text x="885" y="82" text-anchor="middle" font-weight="bold" fill="#7ee787">LinkRenderer</text>
+<text x="804" y="108">keep:&#160;as&#160;written</text>
+<text x="804" y="130">annotate:&#160;live,&#160;plus</text>
+<text x="804" y="148">(goes&#160;to&#160;evil[.]example)</text>
+<text x="804" y="170">unlink:&#160;defanged&#160;text&#160;+</text>
+<text x="804" y="188">(link&#160;to&#160;evil[.]example</text>
+<text x="804" y="206">removed:&#160;it&#160;carried&#160;email)</text>
+<text x="804" y="236" fill="#8b949e">notices&#160;never&#160;autolink:</text>
+<text x="804" y="254" fill="#8b949e">[.]&#160;&#160;[@]&#160;&#160;[:]//</text>
+<text x="804" y="284" fill="#8b949e">&#8594;&#160;LinkReport</text>
+<rect x="20" y="350" width="440" height="170" rx="8" fill="#161b22" stroke="#30363d"/>
+<text x="240" y="372" text-anchor="middle" font-weight="bold" fill="#79c0ff">EgressContext</text>
+<text x="34" y="398">SensitiveValue:&#160;address,&#160;account,&#160;session&#160;token&#160;[EMAIL_1]</text>
+<text x="34" y="420">EgressSource:&#160;user&#160;&#183;&#160;system&#160;&#183;&#160;tool&#160;&#183;&#160;retrieved</text>
+<text x="34" y="442">copied&#160;from&#160;the&#160;user&#160;&#8594;&#160;theirs&#160;to&#160;send</text>
+<text x="34" y="464">copied&#160;from&#160;a&#160;tool&#160;&#8594;&#160;only&#160;named&#160;values&#160;checked</text>
+<text x="34" y="486">composed&#160;by&#160;the&#160;model&#160;&#8594;&#160;every&#160;check</text>
+<text x="34" y="508" fill="#8b949e">reports&#160;carry&#160;labels&#160;and&#160;hosts,&#160;never&#160;values</text>
+<rect x="500" y="350" width="480" height="170" rx="8" fill="#161b22" stroke="#e3b341"/>
+<text x="740" y="372" text-anchor="middle" font-weight="bold" fill="#e3b341">EgressLedger&#160;(actor)&#160;and&#160;LinkStreamGate</text>
+<text x="514" y="398">ledger:&#160;per-host&#160;fragments&#160;across&#160;turns&#160;&#8594;&#160;shardedValue</text>
+<text x="514" y="420">a&#160;host&#160;that&#160;collected&#160;data&#160;stays&#160;quarantined</text>
+<text x="514" y="446">gate:&#160;holds&#160;the&#160;trailing&#160;word,&#160;an&#160;unclosed&#160;link,&#160;a</text>
+<text x="514" y="464">definition&#160;still&#160;being&#160;written,&#160;links&#160;after&#160;an&#160;open&#160;`</text>
+<text x="514" y="486">released&#160;text&#160;=&#160;sanitize(whole&#160;answer)&#160;for&#160;that&#160;span</text>
+<text x="514" y="508" fill="#8b949e">demo:&#160;175&#160;of&#160;175&#160;two-chunk&#160;splits&#160;identical</text>
+</g>
+<g stroke="#8b949e" stroke-width="1.5" fill="none">
+<line x1="220" y1="120" x2="258" y2="120" marker-end="url(#a)"/>
+<line x1="360" y1="180" x2="360" y2="198" marker-end="url(#a)"/>
+<line x1="460" y1="255" x2="498" y2="255" marker-end="url(#a)"/>
+<line x1="750" y1="185" x2="788" y2="185" marker-end="url(#a)"/>
+<line x1="460" y1="430" x2="560" y2="312" marker-end="url(#a)"/>
+<line x1="740" y1="350" x2="680" y2="312" marker-end="url(#a)"/>
+</g>
+</svg>
